@@ -33,34 +33,26 @@ function enterRoom() {
 function Login() {
     const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', userName);
     promise.then(searchMessage);
-    /* promise.catch(error); */
 }
 searchMessage();
 
 function searchMessage() {
     const promise = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
     promise.then(displayMessage);
-    /* promise.catch(errorUserName); */
 }
-
-/* function error() {
-    alert(`Digite outro nome, este já está em uso!`);
-    window.location.reload();
-} */
 
 function connection() {
     const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/status', userName);
     promise.then(online);
     promise.catch(offline);
 }
-connection();
 
 function online() {
-    alert('usuário conectado - status online');
+    alert('usuário conectado');
 }
 
 function offline() {
-    alert('usuário desconectado - status offline');
+    alert('usuário desconectado');
 }
 
 function displayMessage(response) {
@@ -112,10 +104,9 @@ function displayMessage(response) {
     }
 
     let chat = document.querySelector('messages');
-    chat.scrollIntoView();
+    chat.scrollIntoView(false);
 
 }
-setInterval(displayMessage, 3000);
 
 displayMessage();
 
