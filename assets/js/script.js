@@ -33,20 +33,20 @@ function enterRoom() {
 function Login() {
     const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', userName);
     promise.then(searchMessage);
-    promise.catch(errorUserName);
+    /* promise.catch(error); */
 }
 searchMessage();
 
 function searchMessage() {
     const promise = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
     promise.then(displayMessage);
-    promise.catch(errorUserName);
+    /* promise.catch(errorUserName); */
 }
 
-function errorUserName() {
+/* function error() {
     alert(`Digite outro nome, este já está em uso!`);
     window.location.reload();
-}
+} */
 
 function connection() {
     const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/status', userName);
