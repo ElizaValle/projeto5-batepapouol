@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bate Papo UOL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    
+    <header>
+        <img src="./assets/images/logo.png" alt="logo" /> 
+        <ion-icon name="people-outline"></ion-icon>
+    </header>
+
+    <div class="chat" data-test="message">
+        <div class="messages" data-test="message"></div>
+    </div>
+
+    <footer>
+        <input type="text" class="message-input" placeholder="Escreva aqui..." data-test="input-mesage" />
+        <button class="send-button" id="submit" onclick="sendMessage()" data-test="send-message">  
+            <ion-icon name="paper-plane-outline"></ion-icon>
+        </button>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

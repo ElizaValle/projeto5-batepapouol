@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 375px;
+    background: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 375px;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header img {
+    width: 75px;
+    height: 53px;
+    margin-left: 22px;
+    margin-top: 16px;
+    margin-bottom: 11px;
+}
+
+header > ion-icon {
+    margin-left: 320px;
+    margin-top: -390px;
+    margin-bottom: 30px;
+    font-size: 42px;
+    color: #000;
+}
+
+.messages {
+    width: 100%;
+    margin-top: 106px;
+    margin-bottom: 106px;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-message,
+.normal-message,
+.private-message {
+    height: 40px;
+    margin: 5px 0;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.status-message .time,
+.normal-message .time,
+.private-message .time {
+    font-weight: 400;
+    margin-left: 8px;
+    color: #aaa;
+}
+
+.status-message .name,
+.normal-message.name,
+.private-message .name {
+    font-weight: 700;
+    color: #000;
+} 
+
+.status-message .text,
+.normal-message .text,
+.private-message .text {
+    font-weight: 400;
+    color: #000;
+}
+
+.normal-message {
+    background-color: #fff;
+}
+
+.status-message{
+    background-color: #dcdcdc;
+}
+
+.private-message{
+    background-color: #ffdede;
+}
+
+footer {
+    width: 375px;
+    height: 80px;
+    background: #fff;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer > input {
+    border: none;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+}
+
+footer > button {
+    border: none;
+    background: #fff;
+}
+
+footer > button > ion-icon {
+    font-size: 26px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
