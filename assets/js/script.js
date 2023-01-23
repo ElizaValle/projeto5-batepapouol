@@ -1,10 +1,8 @@
 let message = [];
 
-let userName;
+let userName = {name: prompt(`Digite seu nome:`)}; 
 
 function enterRoom() {
-
-    userName = {name: prompt(`Digite seu nome:`)};
 
     const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', userName);
 
@@ -51,7 +49,7 @@ function errorUserName() {
 }
 
 function connection() {
-    promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/status', userName);
+    const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/status', userName);
     promise.then(online);
     promise.catch(offline);
 }
